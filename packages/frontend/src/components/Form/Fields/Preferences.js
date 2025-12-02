@@ -21,7 +21,7 @@ function Preferences({
       role="group"
       aria-labelledby="preferences-group-label"
     >
-      <h2 id="preferences-group-label" className="text-lg font-bold mb-2">
+      <h2 id="preferences-group-label" className="text-sm md:text-lg font-bold mb-2">
         Preferências:
       </h2>
 

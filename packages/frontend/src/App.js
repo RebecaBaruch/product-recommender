@@ -13,23 +13,23 @@ function App() {
   };
 
   return (
-    <main className="bg-gray-100 min-h-screen flex flex-col justify-center items-center">
-      <div className="bg-white w-full max-w-6xl h-full p-10 rounded-xl shadow-2xl">
+    <main className="bg-gray-100 min-h-[100vh] flex flex-col justify-center md:items-center">
+      <div className="bg-white w-full max-w-6xl h-full p-4 md:p-10 rounded-xl shadow-2xl">
         <header
-          className="mb-8 pb-10 border-b text-center"
+          className="mb-5 md:mb-8 pb-5 md:pb-10 border-b text-center"
           aria-label="Introdução o Recomendador de Produtos"
         >
-          <div className="mb-5 md:mb-10">
+          <div className="mb-2 md:mb-5 md:mb-10">
             <img
               src="./rdstation-logo.png"
               alt="Logo RD Station"
-              className="mx-auto mb-5"
+              className="w-36 md:mx-auto mb-8 md:mb-5"
             />
-            <h1 className="text-lg text-left md:text-center md:text-3xl font-bold">
+            <h1 className="text-base text-left md:text-center md:text-3xl font-bold">
               Recomendador de Produtos RD Station
             </h1>
           </div>
-          <p className="text-sm md:text-lg text-left">
+          <p className="text-xs md:text-lg text-left">
             Bem-vindo ao Recomendador de Produtos RD Station. Aqui você pode
             encontrar uma variedade de produtos da RD Station, cada um projetado
             para atender às necessidades específicas do seu negócio. De CRM a
@@ -49,7 +49,7 @@ function App() {
           </section>
 
           <aside
-            className="md:w-3/5"
+            className="mt-10 md:mt-0 md:w-3/5"
             aria-label="Lista de Produtos Recomendados"
             role="region"
           >

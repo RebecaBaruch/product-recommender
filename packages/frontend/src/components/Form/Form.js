@@ -36,7 +36,7 @@ function Form({ setRecommendations, onClear }) {
   };
 
   return (
-    <form className="flex flex-col gap-4 bg-white" onSubmit={handleSubmit}>
+    <form className="flex flex-col gap-4 bg-white p-4 rounded-lg shadow-md" onSubmit={handleSubmit}>
       <Preferences
         preferences={preferences}
         selectedPreferences={formData.selectedPreferences}
@@ -58,13 +58,13 @@ function Form({ setRecommendations, onClear }) {
         }
       />
 
-      <div className="flex justify-between space-x-4">
+      <div className="flex flex-col md:flex-row justify-between gap-2">
         <SubmitButton text="Obter recomendação" disabled={isSubmitDisabled} />
 
         <button
           type="button"
           onClick={handleClear}
-          className="w-full px-6 py-3 border border-blue-500 font-semibold text-blue-500 text-md rounded-lg hover:bg-blue-100 hover:border-blue-100 flex-grow"
+          className="w-full px-3 py-3 border border-blue-500 font-semibold text-blue-500 text-sm md:text-md rounded hover:bg-blue-100 hover:border-blue-100 flex-grow"
           aria-label="Limpar preferências e recomendações" /* Acessibilidade */
         >
           Limpar
