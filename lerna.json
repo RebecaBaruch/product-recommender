@@ -1,7 +1,6 @@
 {
   "packages": [
-    "frontend",
-    "backend"
+    "packages/*"
   ],
   "$schema": "node_modules/lerna/schemas/lerna-schema.json",
   "version": "0.0.0",

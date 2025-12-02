@@ -2,13 +2,12 @@
   "name": "root",
   "private": true,
   "workspaces": [
-    "frontend",
-    "backend"
+    "packages/*"
   ],
   "scripts": {
-    "start": "lerna run start",
-    "start:frontend": "cd frontend && npm start",
-    "start:backend": "cd backend && npm start",
+    "start": "lerna run --parallel start",
+    "start:frontend": "cd packages/frontend && npm start",
+    "start:backend": "cd packages/backend && npm start",
     "dev": "concurrently \"npm run start:frontend\" \"npm run start:backend\""
   },
   "dependencies": {},

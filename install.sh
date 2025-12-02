@@ -4,10 +4,10 @@
 ROOT_DIR=$(pwd)
 
 # Diretório do backend
-BACKEND_DIR="${ROOT_DIR}/backend"
+BACKEND_DIR="${ROOT_DIR}/packages/backend"
 
 # Diretório do frontend
-FRONTEND_DIR="${ROOT_DIR}/frontend"
+FRONTEND_DIR="${ROOT_DIR}/packages/frontend"
 
 echo "Instalando dependências do monorepo..."
 yarn install
