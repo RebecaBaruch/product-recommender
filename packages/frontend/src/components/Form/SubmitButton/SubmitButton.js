@@ -1,7 +1,7 @@
 import React from 'react';
 
-function SubmitButton({ text }) {
-  return <button type="submit" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">{text}</button>;
+function SubmitButton({ text, disabled }) {
+  return <button type="submit" disabled={disabled} className="w-full bg-blue-500 hover:bg-blue-700 text-white text-md font-bold py-2 px-3 rounded disabled:opacity-50 disabled:cursor-not-allowed">{text}</button>;
 }
 
 export default SubmitButton;

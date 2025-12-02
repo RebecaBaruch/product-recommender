@@ -1,54 +1,75 @@
 // Form.js
-
-import React, { useEffect } from 'react';
+import React, { useState } from 'react';
 import { Preferences, Features, RecommendationType } from './Fields';
 import { SubmitButton } from './SubmitButton';
 import useProducts from '../../hooks/useProducts';
 import useForm from '../../hooks/useForm';
 import useRecommendations from '../../hooks/useRecommendations';
 
-function Form() {
+function Form({ setRecommendations, onClear }) {
   const { preferences, features, products } = useProducts();
   const { formData, handleChange } = useForm({
     selectedPreferences: [],
     selectedFeatures: [],
     selectedRecommendationType: '',
   });
-
-  const { getRecommendations, recommendations } = useRecommendations(products);
+  const { getRecommendations } = useRecommendations(products);
+  const isSubmitDisabled = !formData.selectedRecommendationType;
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const dataRecommendations = getRecommendations(formData);
 
-    /**
-     * Defina aqui a lógica para atualizar as recomendações e passar para a lista de recomendações
-     */
+    if (isSubmitDisabled) {
+      return;
+    }
+
+    onClear();
+    const dataRecommendations = getRecommendations(formData);
+    setRecommendations(dataRecommendations);
+  };
+
+  const handleClear = () => {
+    onClear();
+    handleChange('selectedPreferences', []); 
+    handleChange('selectedFeatures', []);
+    handleChange('selectedRecommendationType', '');
   };
 
   return (
-    <form
-      className="max-w-md mx-auto p-4 bg-white rounded-lg shadow-md"
-      onSubmit={handleSubmit}
-    >
+    <form className="flex flex-col gap-4 bg-white" onSubmit={handleSubmit}>
       <Preferences
         preferences={preferences}
+        selectedPreferences={formData.selectedPreferences}
         onPreferenceChange={(selected) =>
           handleChange('selectedPreferences', selected)
         }
       />
       <Features
         features={features}
+        selectedFeatures={formData.selectedFeatures}
         onFeatureChange={(selected) =>
           handleChange('selectedFeatures', selected)
         }
       />
       <RecommendationType
+        selectedValue={formData.selectedRecommendationType}
         onRecommendationTypeChange={(selected) =>
           handleChange('selectedRecommendationType', selected)
         }
       />
-      <SubmitButton text="Obter recomendação" />
+
+      <div className="flex justify-between space-x-4">
+        <SubmitButton text="Obter recomendação" disabled={isSubmitDisabled} />
+
+        <button
+          type="button"
+          onClick={handleClear}
+          className="w-full px-6 py-3 border border-blue-500 font-semibold text-blue-500 text-md rounded-lg hover:bg-blue-100 hover:border-blue-100 flex-grow"
+          aria-label="Limpar preferências e recomendações" /* Acessibilidade */
+        >
+          Limpar
+        </button>
+      </div>
     </form>
   );
 }
