@@ -4,13 +4,13 @@ Este projeto é parte do teste técnico para a vaga de desenvolvedor front-end n
 
 ## Missão
 
-Sua missão é desenvolver a funcionalidade central de recomendação de produtos dentro de uma aplicação React.js pré-existente. Você deverá implementar a lógica que permite aos usuários selecionar suas preferências e funcionalidades desejadas, e então receber recomendações de produtos correspondentes.
+Desenvolver a funcionalidade central de recomendação de produtos dentro de uma aplicação React.js pré-existente. Você deverá implementar a lógica que permite aos usuários selecionar suas preferências e funcionalidades desejadas, e então receber recomendações de produtos correspondentes.
 
 ## Contexto
 
-Este projeto é parte de uma etapa técnica do processo seletivo para a vaga de desenvolvedor front-end na RD Station. A estrutura básica da aplicação já está construída com React.js para o front-end e utiliza json-server para simular um servidor RESTful com dados de produtos.
+Este projeto é parte de uma etapa técnica do processo seletivo para a vaga de desenvolvedor front-end na RD Station. A estrutura da aplicação deve ser construída com React.js para o front-end e utiliza json-server para simular um servidor RESTful com dados de produtos.
 
-Seu foco deve ser na implementação da lógica de recomendação e na integração desta funcionalidade com a interface do usuário existente. A aplicação já possui um layout básico utilizando Tailwind CSS.
+O foco deve ser a implementação da lógica de recomendação e na integração desta funcionalidade com a interface do usuário existente. A aplicação já possuía um layout básico utilizando Tailwind CSS.
 
 ## Tecnologias Utilizadas
 
@@ -24,7 +24,7 @@ Este projeto utiliza as seguintes tecnologias principais:
 
 ### Familiaridade com Tailwind CSS
 
-O layout da aplicação foi desenvolvido utilizando Tailwind CSS. Familiaridade básica com este framework de CSS utilitário será útil para entender e potencialmente modificar o layout existente.
+O layout da aplicação foi desenvolvido utilizando Tailwind CSS. Familiaridade básica com este framework de CSS utilitário foi utilizado para modificar o layout existente.
 
 ### Versão do Node.js
 
@@ -42,22 +42,21 @@ Este projeto requer Node.js versão 18.3 ou superior. Se você não tem essa ver
 
 2. Instale e use a versão 18.3 do Node.js: nvm install 18.3 & nvm use 18.3
 
-Após instalar a versão correta do Node.js, você pode prosseguir com a instalação das dependências do projeto e iniciar o desenvolvimento.
+Após instalar a versão correta do Node.js, você pode prosseguir com a instalação das dependências do projeto para rodar a aplicação.
 
 ## Foco do Desenvolvimento
 
-Para completar este teste, você deve concentrar-se principalmente em três arquivos específicos:
+Para completar este teste, houve uma concentração maior em três arquivos específicos:
 
-1. `App.js`: Neste componente, você encontrará o comentário "Dadas atualizações no formulário, necessário atualizar a lista de recomendações". Implemente a lógica necessária para atualizar a lista de recomendações com base nas entradas do usuário.
+1. `App.js`: Neste componente, foi implementado a lógica necessária para atualizar a lista de recomendações com base nas entradas do usuário.
 
-2. `Form.js`: Este componente contém o comentário "Defina aqui a lógica para atualizar as recomendações e passar para a lista de recomendações". Desenvolva a lógica para processar as entradas do usuário e gerar as recomendações apropriadas.
+2. `Form.js`: Este componente possui a lógica para processar as entradas do usuário e gerar as recomendações apropriadas.
 
-3. `recommendation.service.js`: Neste arquivo de serviço, você verá o comentário "Crie aqui a lógica para retornar os produtos recomendados." Implemente a lógica de negócios para determinar quais produtos devem ser recomendados com base nos critérios fornecidos.
+3. `recommendation.service.js`: Neste arquivo de serviço, foi implementado a lógica de negócios para determinar quais produtos devem ser recomendados com base nos critérios fornecidos.
 
 ## Observações Adicionais
 
-- Sinta-se à vontade para implementar melhorias na cobertura de testes e no layout da aplicação, caso tenha tempo adicional.
-- O código existente serve como base para sua implementação. Concentre-se em desenvolver a funcionalidade de recomendação de produtos conforme especificado nos requisitos do projeto e nos arquivos mencionados acima.
+- Também foi implementado melhorias na cobertura de testes e no layout da aplicação.
 
 ## Requisitos
 
@@ -91,11 +90,9 @@ Para completar este teste, você deve concentrar-se principalmente em três arqu
 6. O serviço deve ser capaz de lidar com diferentes tipos de preferências e funcionalidades selecionadas pelo usuário.
 7. O serviço deve ser modular e facilmente extensível para futuras atualizações e adições de funcionalidades.
 
-Certifique-se de que todos os critérios de aceite são atendidos durante o desenvolvimento do projeto.
-
 ## Autor
 
-Desenvolvido por [Seu Nome]
+Desenvolvido por Rebeca Baruch
 
 ## Licença
 
