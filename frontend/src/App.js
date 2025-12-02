@@ -17,7 +17,7 @@ function App() {
       <div className="bg-white w-full max-w-6xl h-full p-10 rounded-xl shadow-2xl">
         <header
           className="mb-8 pb-10 border-b text-center"
-          aria-label="Introdução ao Recomendador de Produtos"
+          aria-label="Introdução o Recomendador de Produtos"
         >
           <div className="mb-5 md:mb-10">
             <img
