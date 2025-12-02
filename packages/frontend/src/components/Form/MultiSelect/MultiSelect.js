@@ -1,5 +1,6 @@
 // MultiSelect.js (Versão Simples - Dropdown com Checkboxes)
 import React, { useState, useRef, useEffect } from 'react';
+import Checkbox from '../../shared/Checkbox';
 
 /**
  * Componente Dropdown que gerencia seleção múltipla via checkboxes.
@@ -50,7 +51,7 @@ function MultiSelect({ options, selectedOptions, onChange, placeholder }) {
                     ? `${selectedOptions.length} selecionadas` 
                     : placeholder}
       >
-        <span className={selectedOptions.length > 0 ? "text-gray-800" : "text-gray-500"}>
+        <span className={`text-xs md:text-base ${selectedOptions.length > 0 ? "text-gray-800" : "text-gray-500"}`}>
           {selectedOptions.length > 0 
             ? `${selectedOptions.length} ${selectedOptions.length === 1 ? 'item' : 'itens'} selecionados`
             : placeholder}
@@ -65,14 +66,13 @@ function MultiSelect({ options, selectedOptions, onChange, placeholder }) {
           {options.map((option) => (
             <div
               key={option}
-              className="p-3 hover:bg-gray-100 cursor-pointer flex items-center"
+              className="p-3 text-xs md:text-md hover:bg-gray-100 cursor-pointer flex items-center"
               onClick={() => toggleOption(option)}
             >
-              <input 
-                type="checkbox"
+              <Checkbox 
+                id={`multiselect-${option}`}
                 checked={selectedOptions.includes(option)}
                 readOnly
-                className="mr-3 h-4 w-4 text-blue-600 border-gray-300 rounded"
               />
               {option}
             </div>
